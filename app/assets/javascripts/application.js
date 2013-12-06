@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 
 //= require handlebars
 //= require ember
@@ -22,3 +23,5 @@
 // for more details see: http://emberjs.com/guides/application/
 window.Skite = Ember.Application.create()
 
+
+$(function(){ $(document).foundation(); });

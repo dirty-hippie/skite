@@ -3,3 +3,5 @@
 Skite.Router.map ()->
   # @resource('posts')
 
+  @resource 'achievements'
+

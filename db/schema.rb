@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20131209185828) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "api_achievements", force: true do |t|
+  create_table "achievements", force: true do |t|
     t.string   "title"
     t.datetime "achieved_at"
     t.datetime "created_at"

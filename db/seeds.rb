@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Achievement.create!(title: 'Create controller', achieved_at: DateTime.now)
+Achievement.create!(title: 'Move to new appartment', achieved_at: DateTime.now - 1)
+Achievement.create!(title: 'Paint the house', achieved_at: DateTime.now - 5.hours)

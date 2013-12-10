@@ -3,6 +3,30 @@
 Skite.AchievementsController = Ember.ArrayController.extend
   sortProperties: [ 'achievedAt' ]
   sortAscending: false
+  isValid: (->        
+    msg = ''
+    isValid = true
+    
+    str = @get('newAchievement')
+    
+    unless  str
+      isValid = false
+      msg += 'Field can\'t be empty'
+    
+    day = /\bd\d\d\b/.exec(str)
+    if day 
+      if parseInt(day[0].split('d')[1]) > 31
+        isValid = false
+        msg += 'Invalid day.'
+    month = /\bm\d\d\b/.exec(str)
+    if month 
+      if parseInt(month[0].split('m')[1]) > 12
+        isValid = false
+        msg += 'Invalid month.'            
+
+    @set('errorMessage', msg)
+    isValid
+  ).property('newAchievement')
   
   actions:
     addAchievement: -> 
@@ -27,7 +51,7 @@ Skite.AchievementsController = Ember.ArrayController.extend
       achievedAt.setDate(day[0].split('d')[1])
     if month
       title = title.replace(month[0], '')
-      achievedAt.setMonth(parseInt(month[0].split('m')[1]) - 1 )
+      achievedAt.setMonth(parseInt(month[0].split('m')[1]) - 1)
     if year 
       title = title.replace(year[0], '')
       achievedAt.setYear(parseInt(year[0].split('y')[1]))

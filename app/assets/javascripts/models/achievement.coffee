@@ -31,9 +31,10 @@ Skite.Achievement = DS.Model.extend
     @set('errors', msg)
 
     if isValid is false and @get('isValid')
-      @get('stateManager').send('becameInvalid')
+      @send('becameInvalid')
     if isValid and @get('isValid') is false
-      @get('stateManager').send('becameValid')
+      @send('becameValid')
+    
     isValid
 
   parseInput: ->

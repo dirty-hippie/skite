@@ -11,9 +11,11 @@
 		<hr>
 		<ul class="achievements">
 			{{#each controller}}
+				{{#unless isDirty}}
 				<li>
 					<span>{{date achievedAt}}</span> {{title}}
 				</li>
+				{{/unless}}
 			{{else}}
 				<li>
 					<h4>There are no achievements yet.</h4>

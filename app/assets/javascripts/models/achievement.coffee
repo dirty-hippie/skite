@@ -3,6 +3,10 @@ Skite.Achievement = DS.Model.extend
   achievedAt: DS.attr 'date'
   input: DS.attr 'string'
 
+  description: DS.attr 'string'
+  descriptionSrc: DS.attr 'string'
+
+
   commit: ->
     @parseInput()
     @save() if @validate()

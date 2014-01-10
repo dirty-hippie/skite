@@ -9,11 +9,12 @@
 			{{#link-to 'achievements.new'}} <img src="/assets/plus.png" alt="">{{/link-to}}
 		</div>
 		<hr>
-		<ul class="achievements">
+		<ul 
 			{{#each controller}}
 				{{#unless isDirty}}
 				<li>
-					<span>{{date achievedAt}}</span> {{title}}
+					<span>{{date achievedAt}}</span> 
+					{{#link-to 'achievement' this}}{{title}}{{/link-to}}
 				</li>
 				{{/unless}}
 			{{else}}

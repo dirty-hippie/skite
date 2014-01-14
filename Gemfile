@@ -45,8 +45,8 @@ gem 'unicorn'
 # gem 'debugger', group: [:development, :test]
 
 gem 'ember-rails'
-gem 'ember-source', '1.2.0.1' # or the version you need
-gem 'handlebars-source', '1.1.2'
-gem 'ember-data-source', '1.0.0.beta.3'
+gem 'ember-source', '1.3.0' # or the version you need
+gem 'handlebars-source', '~> 1.2.1'
+gem 'ember-data-source', '1.0.0.beta.5'
 gem 'foundation-rails'
 gem 'kramdown'

@@ -2,7 +2,7 @@
     <fieldset>
       <legend>Skite Away!</legend>      
       <div class="row">
-        <div {{bindAttr class=":large-10 :columns isValid::error"}}>
+        <div {{bind-attr class=":large-10 :columns isValid::error"}}>
           {{input type="text" value=input}}  
           {{#unless isValid}}
             <small>{{errors}}</small>

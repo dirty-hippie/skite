@@ -18,7 +18,7 @@ Skite.AchievementsNewController = Ember.Controller.extend
   ).property('isValid')
   
   actions:
-    addAchievement: -> 
+    addAchievement: ->       
       achievement = @get 'content'
 
       if achievement
@@ -31,6 +31,7 @@ Skite.AchievementsNewController = Ember.Controller.extend
 
       achievement.commit()
       @set('content', achievement)
+
 
   resetProperties: ->
     @set('content', null)
